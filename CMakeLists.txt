@@ -1,0 +1,10 @@
+cmake_minimum_required (VERSION 3.0)
+project (Integral)
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
+set (CMAKE_BINARY_DIR bin)
+set (CMAKE_SOURCE_DIR src)
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+
+set (EXTRA_LIB lib)
+add_executable(main ${CMAKE_SOURCE_DIR}/main.cpp)
+target_link_libraries (main pthread)
